@@ -1,0 +1,25 @@
+name: Java CI     #Actions名称
+
+on: 
+  push:
+    tags:
+      - "v*"       #在提交master时触发
+
+jobs:
+  build:
+    #	配置权限
+    permissions: write-all
+    runs-on: ubuntu-latest    #运行环境
+    steps:
+      # 下载代码
+      - uses: actions/checkout@master    #获取master分支
+      - name: Set up JDK 1.8
+      # 安装 JDK
+        uses: actions/checkout@v3  #使用官方脚本创建java环境
+        with:
+          java-version: 1.8
+          cache: maven
+          # 配置 settings.xml 一般用于 Mavne 私库验证等
+      
+      - name: Build with Maven
+        run: mvn -B package --file pom.xml
