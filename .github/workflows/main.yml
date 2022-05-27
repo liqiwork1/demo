@@ -24,6 +24,7 @@ jobs:
       - name: ls source code dir
         run: |
           ls ./
+          echo $RUNNER_TEMP
       
       - name: Build with Maven
         run: mvn -B package --file pom.xml
