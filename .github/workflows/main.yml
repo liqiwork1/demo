@@ -2,6 +2,7 @@ name: Java CI     #Actions名称
 
 on: 
   push:
+    branches: [main]
     tags:
       - "v*"       #在提交master时触发
 
