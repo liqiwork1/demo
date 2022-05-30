@@ -17,7 +17,7 @@ jobs:
         uses: joschi/setup-jdk@v2
         with:
           java-version: '8'
-          cache: maven
+          distribution: 'adopt'
           # 配置 settings.xml 一般用于 Mavne 私库验证等
 #       - name: Download Maven
 #         run: |
