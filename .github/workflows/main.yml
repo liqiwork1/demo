@@ -15,9 +15,9 @@ jobs:
       # 下载代码
       - uses: actions/checkout@master    #获取master分支
       - name: Set up JDK 1.8
-        uses: joschi/setup-jdk@v2
+        uses: actions/setup-java@v3
         with:
-          java-version: '8'
+          java-version: '1.8'
           cache: maven
           # 配置 settings.xml 一般用于 Mavne 私库验证等
 #       - name: Download Maven
