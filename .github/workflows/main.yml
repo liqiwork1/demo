@@ -15,7 +15,6 @@ jobs:
 #         uses: joschi/setup-jdk@v2
 #         with:
 #           java-version: '8'
-#           cache: maven
   build:
 #     needs: setup
     #	配置权限
@@ -26,7 +25,6 @@ jobs:
         uses: joschi/setup-jdk@v2
         with:
           java-version: '8'
-          cache: maven
       # 下载代码
       - uses: actions/checkout@master    #获取master分支    
           # 配置 settings.xml 一般用于 Mavne 私库验证等
