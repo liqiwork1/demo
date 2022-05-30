@@ -15,21 +15,19 @@ jobs:
       # 下载代码
       - uses: actions/checkout@master    #获取master分支
       - name: Set up JDK 1.8
-      # 安装 JDK
-        uses: actions/checkout@v3  #使用官方脚本创建java环境
         with:
           java-version: 1.8
           cache: maven
           # 配置 settings.xml 一般用于 Mavne 私库验证等
-      - name: Download Maven
-        run: |
-          curl -sL https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip -o maven.zip
-          apt-get update
-          apt-get -y install unzip
-          unzip -d /usr/share maven.zip
-          rm maven.zip
-          ln -s /usr/share/apache-maven-3.6.3/bin/mvn /usr/bin/mvn
-          echo "M2_HOME=/usr/share/apache-maven-3.6.3" | tee -a /etc/environment
+#       - name: Download Maven
+#         run: |
+#           curl -sL https://www-eu.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.zip -o maven.zip
+#           apt-get update
+#           apt-get -y install unzip
+#           unzip -d /usr/share maven.zip
+#           rm maven.zip
+#           ln -s /usr/share/apache-maven-3.6.3/bin/mvn /usr/bin/mvn
+#           echo "M2_HOME=/usr/share/apache-maven-3.6.3" | tee -a /etc/environment
       - name: ls source code dir
         run: |
           ls ./
