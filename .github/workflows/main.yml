@@ -10,7 +10,7 @@ jobs:
   build:
     #	配置权限
     permissions: write-all
-    runs-on: self-hosted    #运行环境
+    runs-on: ubuntu-lates    #运行环境
     steps:
       # 下载代码
       - uses: actions/checkout@master    #获取master分支
