@@ -67,5 +67,5 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: false
           title: "Release ${{ env.RELEASE_VERSION }}"
-          files: |
-            staging/*.jar
+#           files: |
+#             staging/*.jar
