@@ -1,5 +1,5 @@
 
-name: Java CI     #Actions名称
+name: self-hosted CI     #Actions名称
 
 on: 
   push:
