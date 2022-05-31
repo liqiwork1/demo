@@ -6,7 +6,11 @@ on:
     branches: [main]
     tags:
       - "v*"       #在提交master时触发
-
+      
+permissions:
+  id-token: write
+  contents: read
+  actions: read
 jobs:
   setup:
     permissions: write-all
