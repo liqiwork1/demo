@@ -16,13 +16,13 @@ jobs:
         with:
           java-version: '8'
   build:
-    needs: setup
+#     needs: setup
     #	配置权限
     permissions: write-all
     runs-on: ubuntu-latest    #运行环境
     steps:
       # 下载代码
-#       - uses: actions/checkout@master    #获取master分支    
+      - uses: actions/checkout@master    #获取master分支    
 #       - name: Set up JDK 1.8
 #         uses: joschi/setup-jdk@v2
 #         with:
