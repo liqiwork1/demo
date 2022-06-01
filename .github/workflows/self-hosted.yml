@@ -32,7 +32,7 @@ jobs:
     permissions: write-all
     runs-on: self-hosted    #运行环境
     steps:
-      - name: mvn opration
+      - name: mvn opration1
         run: |
           mvn -v
       # 下载代码
