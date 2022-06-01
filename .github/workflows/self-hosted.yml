@@ -50,10 +50,6 @@ jobs:
       - name: Build with Maven
         run: mvn -B package --file pom.xml
       - run: mkdir staging && cp target/*.jar staging
-      - uses: actions/upload-artifact@v3
-        with:
-          name: Package
-          path: staging
 #       - name: Publish package
 #         run: mvn --batch-mode deploy
 #         env:
@@ -85,4 +81,4 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: Package
-          path: build/jar
+          path: staging
