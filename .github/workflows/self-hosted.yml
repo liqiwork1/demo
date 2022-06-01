@@ -25,10 +25,10 @@ jobs:
   build:
     needs: setup
     #	配置权限
-#     permissions: write-all
-    permissions: 
-      contents: read
-      packages: write
+    permissions: write-all
+#     permissions: 
+#       contents: read
+#       packages: write
     runs-on: ubuntu-latest    #运行环境
 #     services:
 #       # Label used to access the service container
@@ -54,10 +54,10 @@ jobs:
         with:
           name: Package
           path: staging
-      - name: Publish package
-        run: mvn --batch-mode deploy
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+#       - name: Publish package
+#         run: mvn --batch-mode deploy
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       # 设置 jobs Maven pom 版本环境变量
 #       - name: Set Release version env variable
 #         run: |
