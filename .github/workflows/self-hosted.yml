@@ -23,7 +23,7 @@ jobs:
     needs: setup
     #	配置权限
     permissions: write-all
-    runs-on: ubuntu-latest    #运行环境
+    runs-on: self-hosted    #运行环境
     steps:
       # 下载代码
       - uses: actions/checkout@master    #获取main分支      
@@ -50,3 +50,12 @@ jobs:
           automatic_release_tag: "latest"
           prerelease: false
           title: "Release ${{ env.RELEASE_VERSION }}"
+  upload:
+    needs: deploy
+    permissions: write-all
+    runs-on: ubuntu-latest    #运行环境
+    steps:
+      - uses: actions/upload-artifact@v3
+        with:
+          name: Package
+          path: staging
