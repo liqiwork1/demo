@@ -75,10 +75,10 @@ jobs:
       url: https://github.com
     steps:
       # 上传文件并发布 Release
+      - name: Archive code coverage results
       - uses: "marvinpinto/action-automatic-releases@latest"
         with:
           repo_token: "${{ secrets.GITHUB_TOKEN }}"
           automatic_release_tag: "latest"
           prerelease: false
           title: "Release ${{ env.RELEASE_VERSION }}"
-      - name: Archive code coverage results
