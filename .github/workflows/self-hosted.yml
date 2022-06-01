@@ -26,15 +26,7 @@ jobs:
       - name: mvn opration
         run: |
           mvn -v
-  build:
-    needs: setup
-    #	配置权限
-    permissions: write-all
-    runs-on: self-hosted    #运行环境
-    steps:
-      - name: mvn opration1
-        run: |
-          mvn -v
+          
       # 下载代码
       - uses: actions/checkout@master    #获取main分支      
       - name: Build with Maven
