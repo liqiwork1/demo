@@ -23,6 +23,9 @@ jobs:
         uses: stCarolas/setup-maven@v4.3
         with:
           maven-version: 3.6.3
+      - name: mvn opration
+        run: |
+          mvn -v
   build:
     needs: setup
     #	配置权限
