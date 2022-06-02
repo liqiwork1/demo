@@ -9,7 +9,7 @@ permissions:
   contents: read
   actions: read
 jobs:
-  setup:
+  build:
     permissions: write-all
     runs-on: self-hosted     #运行环境
     steps:
