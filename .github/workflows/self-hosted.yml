@@ -1,3 +1,5 @@
+name: self-hosted CI/CD
+
 on: 
   push:
     branches: [main]
