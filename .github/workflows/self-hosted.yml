@@ -17,9 +17,10 @@ jobs:
         issues: write
       steps:
         - name: Label issues
-          uses: andymckay/labeler@e6c4322d0397f3240f0e7e30a33b5c5df2d39e90
+        - uses: andymckay/labeler@1.0.2
           with:
-            add-labels: "triage"
+            add-labels: "needs-triage"
+            ignore-if-labeled: true
             repo-token: ${{ secrets.GITHUB_TOKEN }}
   build:
     permissions: write-all
