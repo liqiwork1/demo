@@ -1,6 +1,7 @@
 name: biz1
 
 on:
+  workflow_call:
   push:
     branches: [main]
 
