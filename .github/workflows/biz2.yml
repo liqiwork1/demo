@@ -8,7 +8,7 @@ jobs:
   job1:
     uses: ./.github/workflows/env.yml
   job2:
-    uses: ./.github/workflows/job1.yml
+    uses: ./.github/workflows/biz1.yml
     needs: job1
   job3:
     runs-on: ubuntu-latest
