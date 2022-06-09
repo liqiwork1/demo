@@ -2,7 +2,7 @@ name: self-hosted CI/CD
 
 on: 
   push:
-    branches: [main]
+#     branches: [main]
     tags:
       - "v*"      #在提交master时触发
       
