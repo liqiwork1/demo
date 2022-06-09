@@ -9,7 +9,6 @@ jobs:
     uses: ./.github/workflows/env.yml
   job2:
     uses: ./.github/workflows/biz1.yml
-    needs: job1
   job3:
     runs-on: ubuntu-latest
     needs: job1
