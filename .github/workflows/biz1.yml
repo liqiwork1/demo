@@ -1,13 +1,8 @@
 name: biz1
 
 on:
-  workflow_call:
-    outputs:
-        biz1:
-          description: "The first output string"
-          value: "env3"
-#   push:
-#     branches: [main]
+  push:
+    branches: [main]
 
 jobs:
   job1:
