@@ -1,10 +1,10 @@
 name: biz1
 
 on:
-  push:
-    branches: [main]
+#   push:
+#     branches: [main]
   repository_dispatch:
-    types: [production-deploy]
+    types: [test-deploy]
 
 jobs:
   job1:
