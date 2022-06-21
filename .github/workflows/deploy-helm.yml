@@ -5,9 +5,9 @@ name: deploy
 jobs:
   deploy:
     name: deploy to cluster
-#     runs-on: ubuntu-latest
+    runs-on: ubuntu-latest
     permissions: write-all
-    runs-on: self-hosted
+#     runs-on: self-hosted
     steps:
     - name: deploy postgres to cluster
       uses: wahyd4/kubectl-helm-action@master
