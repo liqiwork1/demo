@@ -1,6 +1,6 @@
 on: 
   repository_dispatch:
-    types: [test-helm]
+    types: [test-api]
 name: deploy
 jobs:
   deploy:
