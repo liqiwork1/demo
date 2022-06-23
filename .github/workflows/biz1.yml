@@ -15,5 +15,6 @@ jobs:
     needs: job1
     steps:
       - run: |
+          error
           echo  "${{ needs.job1.outputs.firstword }} ${{ needs.job1.outputs.secondword }} in the biz1."
           echo ${{ github.workspace }}
