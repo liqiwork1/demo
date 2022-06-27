@@ -8,13 +8,8 @@ on:
     types: [test-reuseing]
 
 jobs:
-  job0:
-    runs-on: ubuntu-latest
-    steps:
-      - run : echo "Branch=liqiwork1/reuseing/.github/workflows/reuseing.yml@branch1" >> $GITHUB_ENV
   job1:
-    needs: job0
-    uses: $Branch
+    uses: liqiwork1/reuseing/.github/workflows/reuseing.yml@branch1
   job2:
     runs-on: ubuntu-latest
     needs: job1
