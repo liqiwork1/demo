@@ -1,12 +1,15 @@
 name: useing
 
+env:
+  branch: branch1
+
 on:
   repository_dispatch:
     types: [test-reuseing]
 
 jobs:
   job1:
-    uses: liqiwork1/reuseing/.github/workflows/reuseing.yml@branch1
+    uses: liqiwork1/reuseing/.github/workflows/reuseing.yml@${{ env.branch }}
   job2:
     runs-on: ubuntu-latest
     needs: job1
